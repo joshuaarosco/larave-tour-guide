@@ -1,0 +1,21 @@
+<!-- <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script> -->
+<script src="{{asset('web/assets/js/vendor/jquery-3.7.1.min.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/waypoints.min.js')}}"></script>
+<script src="{{asset('web/assets/js/vendor/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/meanmenu.min.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/swiper.min.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/wow.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/aos.js')}}"></script>
+<script src="{{asset('web/assets/js/vendor/magnific-popup.min.js')}}"></script>
+<script src="{{asset('web/assets/js/vendor/isotope.pkgd.min.js')}}"></script>
+<script src="{{asset('web/assets/js/vendor/imagesloaded.pkgd.min.js')}}"></script>
+<script src="{{asset('web/assets/js/vendor/purecounter.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/nouislider.min.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/nice-select.min.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/cleave.min.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/ScrollTrigger.min.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/SplitText.min.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/gsap.min.js')}}"></script>
+<script src="{{asset('web/assets/js/plugins/flatpickr.js')}}"></script>
+<script src="{{asset('web/assets/js/vendor/ajax-form.js')}}"></script>
+<script src="{{asset('web/assets/js/main.js')}}"></script>

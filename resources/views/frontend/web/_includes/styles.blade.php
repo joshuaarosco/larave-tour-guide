@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="{{asset('web/assets/css/vendor/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/vendor/animate.min.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/plugins/swiper.min.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/plugins/flatpickr.min.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/plugins/chosen.min.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/plugins/nice-select.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/plugins/aos.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/plugins/nouislider.min.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/vendor/magnific-popup.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/vendor/fontawesome-pro.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/vendor/icomoon.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/vendor/spacing.css')}}">
+<link rel="stylesheet" href="{{asset('web/assets/css/main.css')}}">
