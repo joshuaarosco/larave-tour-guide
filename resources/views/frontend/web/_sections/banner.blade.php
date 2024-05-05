@@ -78,12 +78,12 @@
                             <div class="col-xxl-9 col-xl-9 col-lg-10">
                                 <div class="banner-two-content">
                                     <h1 class="banner-title medium fw-7 mb-20 white-text">
-                                        Conquering the Waves: <span class="yellow-shape">Thrilling <img
+                                        Guiding The Way: <span class="yellow-shape">Exploring  <img
                                                 src="{{asset('web/assets/images/shapes/yellow-shape.png')}}"
-                                                alt="yellow-shape"></span>Water Mount Adventure
+                                                alt="yellow-shape"></span>Tourism Through Expert Tour Guides
                                     </h1>
-                                    <p class="banner-description mb-20">Riding the waves: A man finds joy and
-                                        adventure on his water mount.</p>
+                                    <!-- <p class="banner-description mb-20">Riding the waves: A man finds joy and
+                                        adventure on his water mount.</p> -->
                                 </div>
                             </div>
                         </div>
@@ -99,12 +99,12 @@
                             <div class="col-xxl-9 col-xl-9 col-lg-10">
                                 <div class="banner-two-content">
                                     <h1 class="banner-title medium fw-7 mb-20 white-text">
-                                        Glide into Adventure: Couples <span class="yellow-shape">Water <img
+                                        Guiding The Way: <span class="yellow-shape">Exploring  <img
                                                 src="{{asset('web/assets/images/shapes/yellow-shape.png')}}"
-                                                alt="yellow-shape"></span>Skating Delight
+                                                alt="yellow-shape"></span>Tourism Through Expert Tour Guides
                                     </h1>
-                                    <p class="banner-description mb-20">Embrace the thrill as couples glide
-                                        together, savoring the joy of water skating delightfully.</p>
+                                    <!-- <p class="banner-description mb-20">Riding the waves: A man finds joy and
+                                        adventure on his water mount.</p> -->
                                 </div>
                             </div>
                         </div>
