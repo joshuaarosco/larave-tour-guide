@@ -5,6 +5,7 @@ use App\Domain\Interfaces\Repositories\Backoffice\ITourRepository;
 
 use App\Logic\ImageUploader as UploadLogic;
 use App\Models\Backoffice\Tour as Model;
+use App\Models\User;
 use App\Models\Backoffice\TourImage;
 use App\Models\Backoffice\TourGallery;
 use DB, Str;
@@ -13,10 +14,13 @@ class TourRepository extends Model implements ITourRepository
 {
 
     public function fetch(){
+        $today = date('Y-m-d');
+        $tourGuides = User::where('type', 'tour_guide')->whereDate('validity_date','>=',date('Y-m-d'))->pluck('id');
         if(auth()->check() AND in_array(auth()->user()->type, ['tour_guide'])){
             return $this->where('user_id', auth()->user()->id)->get();
         }
-        return $this->all();
+
+        return $this->whereIn('user_id', $tourGuides)->get();
     }
 
     public function saveData($request){
