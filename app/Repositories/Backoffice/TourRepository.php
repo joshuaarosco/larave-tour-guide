@@ -19,7 +19,6 @@ class TourRepository extends Model implements ITourRepository
         if(auth()->check() AND in_array(auth()->user()->type, ['tour_guide'])){
             return $this->where('user_id', auth()->user()->id)->get();
         }
-
         return $this->whereIn('user_id', $tourGuides)->get();
     }
 

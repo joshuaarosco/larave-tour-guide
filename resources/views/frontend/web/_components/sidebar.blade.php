@@ -35,18 +35,18 @@
         <div class="sidebar-widget widget">
             <h6 class="sidebar-widget-title small mb-15">Recent Tour List</h6>
             <div class="sidebar-widget-post">
-                @foreach($toursSide as $index => $tour)
+                @foreach($toursSide as $index => $side)
                 <div class="recent-post">
                     <div class="recent-post-thumb mr-10">
-                        <a href="{{ route('tour.detail', $tour->id) }}">
-                            <img src="{{asset($tour->thumbnail())}}" alt="image">
+                        <a href="{{ route('tour.detail', $side->id) }}">
+                            <img src="{{asset($side->thumbnail())}}" alt="image">
                         </a>
                     </div>
                     <div class="recent-post-content">
                         <h6 class="recent-post-title small underline">
-                            <a href="{{ route('tour.detail', $tour->id) }}">{{ str_limit($tour->name, 35) }}</a>
+                            <a href="{{ route('tour.detail', $side->id) }}">{{ str_limit($side->name, 35) }}</a>
                         </h6>
-                        <span class="recent-post-price">₱ {{ number_format($tour->price, 2) }}</span>
+                        <span class="recent-post-price">₱ {{ number_format($side->price, 2) }}</span>
                     </div>
                 </div>
                 @endforeach
