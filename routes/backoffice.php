@@ -34,6 +34,12 @@ Route::group(['middleware' => ["backoffice.auth"/*, "backoffice.superUserOnly"*/
             Route::post('update-password',['as' => "update_password",'uses' => "AccountController@updatePassword"]);
             Route::get('send-verification',['as' => "send_verification",'uses' => "AccountController@sendVerification"]);
             Route::get('verify-account/{username}',['as' => "verify_account",'uses' => "AccountController@verifyAccount"]);
+
+            Route::get('my-subscription',['as' => "subscription",'uses' => "AccountController@subscription"]);
+            Route::post('my-subscription',['uses' => "AccountController@subscribe"]);
+            
+            Route::get('subscription-list',['as' => "subscription_list",'uses' => "AccountController@subscriptionList"]);
+            Route::post('update-subscription',['as' => "update_subscription",'uses' => "AccountController@updateSub"]);
         });
 
         Route::group(['as' => "user.", 'prefix' => "user", 'middleware' => ["backoffice.superUserOnly"]], function(){

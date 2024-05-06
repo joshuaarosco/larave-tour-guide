@@ -47,9 +47,11 @@
                         {{-- <button class="btn btn-default btn-xs md-hidden mr-1">
                             <i class="fa fa-filter"></i> Filter
                         </button> --}}
+                        @if(auth()->user()->type == 'tour_guide')
                         <a class="btn btn-success btn-create btn-xs md-hidden" href="{{ route('backoffice.tour.create') }}">
                             <i class="fa fa-plus"></i> Create
                         </a>
+                        @endif
                     </div>
                 </div>
                 <div class="col-md-2 sm-hidden">
@@ -58,9 +60,11 @@
                     </button> --}}
                 </div>
                 <div class="col-md-2 sm-hidden">
+                    @if(auth()->user()->type == 'tour_guide')
                     <a class="btn btn-success btn-create btn-block btn-xs table-btn" href="{{ route('backoffice.tour.create') }}">
                         <i class="fa fa-plus"></i>&nbsp;Create
                     </a>
+                    @endif
                 </div>
             </div>
         </div>
@@ -89,6 +93,7 @@
                             title="view" href="{{route('backoffice.tour.gallery',$tour->id)}}">
                                 <i class="fa fa-image"></i> &nbsp; Gallery
                             </a>
+                            @if(auth()->user()->type == 'tour_guide')
                             <a
                             class="btn btn-default btn-rounded btn-edit btn-xs"
                             title="Edit" href="{{ route('backoffice.tour.edit', $tour->id) }}">
@@ -102,6 +107,7 @@
                             data-target="#delete">
                                 <i class="fa fa-times"></i>
                             </button>
+                            @endif
                         </td>
                     </tr>
                     @empty

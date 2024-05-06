@@ -68,9 +68,11 @@
                     <li class="{{in_array(request()->route()->getName(),['backoffice.tour.index'])?'open active':''}}">
                         <a href="{{route('backoffice.tour.index')}}">List</a> <span class="icon-thumbnail">l</span>
                     </li>
+                    @if(auth()->user()->type == 'tour_guide')
                     <li class="{{in_array(request()->route()->getName(),['backoffice.tour.create'])?'open active':''}}">
                         <a href="{{route('backoffice.tour.create')}}">Create</a> <span class="icon-thumbnail">c</span>
                     </li>
+                    @endif
                 </ul>
             </li>
             
@@ -82,6 +84,25 @@
                     <i class="fa fa-calendar-check-o"></i>
                 </span>
 			</li>
+            @if(auth()->user()->type == 'tour_guide')
+			<li class="{{Request::is('backoffice/account/subscription*')?'open active':''}}">
+				<a class="" href="{{route('backoffice.account.subscription')}}">
+                    <span class="title">Subscription</span>
+                </a>
+                <span class="{{in_array(request()->route()->getName(),['backoffice.account.subscription'])?'bg-success':''}} icon-thumbnail">
+                    <i class="fa fa-support"></i>
+                </span>
+			</li>
+            @else
+			<li class="{{Request::is('backoffice/account/subscription*')?'open active':''}}">
+				<a class="" href="{{route('backoffice.account.subscription_list')}}">
+                    <span class="title">Subscriptions</span>
+                </a>
+                <span class="{{in_array(request()->route()->getName(),['backoffice.account.subscription_list'])?'bg-success':''}} icon-thumbnail">
+                    <i class="fa fa-support"></i>
+                </span>
+			</li>
+            @endif
 		</ul>
 		<div class="clearfix"></div>
 	</div>

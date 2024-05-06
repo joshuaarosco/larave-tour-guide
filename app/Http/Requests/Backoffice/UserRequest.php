@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Backoffice;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Input;
 
 class UserRequest extends FormRequest
 {

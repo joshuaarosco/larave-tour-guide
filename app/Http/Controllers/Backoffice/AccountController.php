@@ -31,6 +31,7 @@ class AccountController extends Controller
         $this->CRUDservice = $CRUDservice;
         $this->data['title'] = 'Account';
         $this->data['tourGuide'] = null;
+        $this->data['user_types'] = __('user_type');
     }
 
     public function index(){
@@ -89,5 +90,25 @@ class AccountController extends Controller
             session()->flash('notification-msg', "Account successfully verified!");
 			return redirect()->route('backoffice.survey.response');
 		}
+    }
+
+    public function subscription(){
+        return view('backoffice.pages.account.subscription', $this->data);
+    }
+
+    public function subscribe(Request $request){
+        $subscribe = $this->repo->subscribe($request);
+        return redirect()->back();
+    }
+
+    public function subscriptionList(){
+        $this->data['title'] = 'Subscription';
+        $this->data['users'] = $this->repo->subs();
+        return view('backoffice.pages.account.subscription_list', $this->data);
+    }
+
+    public function updateSub(Request $request){
+        $subscribe = $this->repo->updateSub($request);
+        return redirect()->back();
     }
 }

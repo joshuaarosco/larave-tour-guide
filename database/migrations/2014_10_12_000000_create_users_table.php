@@ -15,6 +15,8 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bool('is_subscribe')->default(false);
+            $table->date('validity_date')->nullable();
             $table->string('fname');
             $table->string('mname')->nullable();
             $table->string('lname');

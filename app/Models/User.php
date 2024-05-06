@@ -47,4 +47,8 @@ class User extends Authenticatable
             return $this->directory.'/'.$this->filename;
         return 'assets/img/placeholder.png';
     }
+
+    public function pop(){
+        return $this->hasMany('App\Models\Backoffice\Subscription', 'user_id','id')->orderBy('created_at', 'DESC')->first();
+    }
 }
